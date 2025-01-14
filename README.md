@@ -67,7 +67,6 @@ This version has been updated for Python 3 compatibility:
    ```
 3. Run the script:
    ```bash
-   python Encoder.py -o payload.bin -l us
-   ```
+python3 EvilRubby.py   ```
 4. Transfer the `payload.bin` to your USB Rubber Ducky device.
 
