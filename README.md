@@ -56,11 +56,11 @@ This version has been updated for Python 3 compatibility:
 
 1. Clone this repository to your system:
    ```bash
-   git clone https://github.com/Iamanyomus/EvilDucky
+   git clone https://github.com/Iamanyomus/EvilRubby/
    ```
 2. Navigate to the encoder directory:
    ```bash
-   cd EvilDucky/Encoder
+   cd EvilRubby/Encoder
    ```
 3. Run the script:
    ```bash
