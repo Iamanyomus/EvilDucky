@@ -28,7 +28,7 @@ This tool compiles and encodes scripts for USB Rubber Ducky payloads. It support
 ## Usage
 
 ```bash
-python Encoder.py -o [output_file] -l [keyboard_layout]
+python3 EvilRubby.py
 ```
 
 - **Arguments**:
