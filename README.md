@@ -52,7 +52,7 @@ This version has been updated for Python 3 compatibility:
 
 1. Clone this repository to your system:
    ```bash
-   git clone https://github.com/your-repo-name.git
+   git clone https://github.com/Iamanyomus/EvilDucky
    ```
 2. Navigate to the encoder directory:
    ```bash
