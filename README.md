@@ -20,6 +20,10 @@ This tool compiles and encodes scripts for USB Rubber Ducky payloads. It support
   - **DELAY**: Add custom or default delay between commands.
   - **REPEAT**: Loop the last instruction multiple times.
   - And more (`SHIFT`, `REM`, etc.).
+  
+## Screenshot
+
+![IMG_20250114_233900_485 (2)](https://github.com/user-attachments/assets/863caaec-a8d1-4f79-bc16-594713091a9c)
 
 ## Usage
 
