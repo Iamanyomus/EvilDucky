@@ -12,7 +12,7 @@ __author__ = "DADDY DARK"
 __credits__ = "DADDY DARK"
 __version__ = "0.1.3"
 __maintainer__ = "DADDY DARK"
-__email__ = "goldrak@gmail.com, hello@rogerserentill.com"
+__email__ = "gamerharshitrajesh@gmail.com"
 __status__ = "Development"
 
 
@@ -25,16 +25,38 @@ class Encoder:
         self.inputFile = ""
         self.outputFile = "inject.bin"
         self.keyboardLayout = "us"
-        self.helper = """Usage: duckencode -i [file ..]			encode specified file
-or: duckencode -i [file ..] -o [file ..]	encode to specified file
+        self.helper = """"""
 
-Arguments:
--i [file ..] 		Input File
--o [file ..] 		Output File
--l [language ..] 		Keyboard Layout (us/es/it/pt/no/ru/gb ...)
+        # ANSI escape codes for colors
+        self.RED = "\033[31m"
+        self.GREEN = "\033[32m"
+        self.YELLOW = "\033[33m"
+        self.BLUE = "\033[34m"
+        self.MAGENTA = "\033[35m"
+        self.CYAN = "\033[36m"
+        self.WHITE = "\033[37m"
+        self.RESET = "\033[0m"
 
-Script Commands:
-ALT [key name] (ex: ALT F4, ALT SPACE)
+        # Print the colorful text
+        print(self.RED + r"""
+   / ____/ |  / /  _/ /   / __\/ / / / ____/ //_/\ \/ /
+  / __/  | | / // // /   / / / / / / / /   / ,<    \  / 
+ / /___  | |/ // // /___/ /_/ / /_/ / /___/ /| |   / /  
+/_____/  |___/___/_____/_____\/____\/____/_/ |_|  /_/   
+                                                        """)
+
+        print(self.YELLOW + "EvilDucky " + self.CYAN + str(self.version) + " by DaddyDark\n" + self.RESET)
+
+        print(self.MAGENTA + """Usage: duckencode -i [file ..]                  encode specified file
+or: duckencode -i [file ..] -o [file ..]        encode to specified file\n""" + self.RESET)
+
+        print(self.GREEN + """Arguments:""" + self.RESET)
+        print(self.CYAN + """-i [file ..]            Input File
+-o [file ..]            Output File
+-l [language ..]                Keyboard Layout (us/es/it/pt/no/ru/gb ...)\n""" + self.RESET)
+
+        print(self.BLUE + """Script Commands:""" + self.RESET)
+        print(self.RED + """ALT [key name] (ex: ALT F4, ALT SPACE)
 CTRL | CONTROL [key name] (ex: CTRL ESC)
 CTRL-ALT [key name] (ex: CTRL-ALT DEL)
 CTRL-SHIFT [key name] (ex: CTRL-SHIFT ESC)
@@ -45,11 +67,7 @@ REM [anything] (used to comment your code, no obligation :) )
 ALT-SHIFT (swap language)
 SHIFT [key name] (ex: SHIFT DEL)
 STRING [any character of your layout]
-REPEAT [Number] (Repeat last instruction N times)
-[key name] (anything in the keyboard.properties)"""
-
-        print("Duck Encoder " + str(self.version) + " by Roger Serentill & GoldraK")
-
+""" + self.RESET)
 
     # The main function to compile the input file and encode it to the output
     # file
@@ -201,29 +219,16 @@ REPEAT [Number] (Repeat last instruction N times)
     def __handleArguments(self, argument):
         # Possible keyboard layouts
         keyboards = [
-            "be",
-            "br",
-            "ca",
-            "ch",
-            "de",
-            "dk",
-            "es",
-            "fi",
-            "fr",
-            "gb",
-            "hr",
-            "it",
-            "no",
-            "pt",
-            "ru",
-            "si",
-            "sv",
-            "tr",
-            "us"]
+            "be", "br", "ca", "ch", "de", "dk", "es", "fi", "fr", "gb", "hr", "it", "no", "pt", "ru", "si", "sv", "tr", "us"
+        ]
         if "-i" not in argument:
             while self.inputFile == "":
                 print(self.helper, "\n")
-                self.inputFile = input("Type the input file: ")
+                try:
+                    self.inputFile = input("Type the input file: ")
+                except KeyboardInterrupt:
+                    print("\nInput interrupted. Exiting...")
+                    sys.exit(1)
         for i, arg in enumerate(argument):
             if arg == argument[0]:
                 continue
@@ -240,7 +245,7 @@ REPEAT [Number] (Repeat last instruction N times)
                     self.keyboardLayout = argument[i + 1]
                 else:
                     while argument[i + 1] not in keyboards:
-                        self.keyboardLayout = raw_input(
+                        self.keyboardLayout = input(
                             "Invalid keyboard layout, please re-enter it (us/es/it/pt/no/ru/gb ...): ")
                 i += 1
             elif arg == "-d":  # Debug
@@ -470,3 +475,4 @@ REPEAT [Number] (Repeat last instruction N times)
 if __name__ == "__main__":
     p = Encoder()
     p.compile(sys.argv)
+    
