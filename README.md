@@ -56,7 +56,7 @@ This version has been updated for Python 3 compatibility:
    ```
 2. Navigate to the encoder directory:
    ```bash
-   cd USB-Rubber-Ducky/Encoder
+   cd EvilDucky/Encoder
    ```
 3. Run the script:
    ```bash
