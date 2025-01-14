@@ -21,9 +21,12 @@ This tool compiles and encodes scripts for USB Rubber Ducky payloads. It support
   - **REPEAT**: Loop the last instruction multiple times.
   - And more (`SHIFT`, `REM`, etc.).
   
-## Screenshot
+## Screenshots
 
 ![IMG_20250114_233900_485 (2)](https://github.com/user-attachments/assets/863caaec-a8d1-4f79-bc16-594713091a9c)
+
+
+![Screenshot_20250115-000201](https://github.com/user-attachments/assets/ae84d5ab-5db5-4c18-8fea-99de1c5e9e53)
 
 ## Usage
 
